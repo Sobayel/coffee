@@ -19,6 +19,7 @@ const SignUp = () => {
             console.log(result.user);
             // new user has been created
             const createdAt = result.user.metadata.creationTime;
+
             const user ={email, createdAt: createdAt};
             fetch('http://localhost:5000/user',{
                 method: 'POST',
